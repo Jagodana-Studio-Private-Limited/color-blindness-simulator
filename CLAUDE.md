@@ -146,9 +146,12 @@ Every tool page follows this exact structure:
    - Animated badge (Sparkles icon + text)
    - Large heading with AnimatedGradientText
    - Subtitle paragraph
-3. **Tool Interface** - The main interactive area
-4. **Feature Cards** - 3-column grid (shown when no results)
-5. **Footer** - About + features list + copyright + "More Tools" link
+   - "Try Now" CTA button (smooth-scrolls to tool section)
+3. **Feature Cards** - 3-column grid highlighting key features
+4. **Tool Interface** - The main interactive area (`id="tool"`, scroll target)
+5. **FAQ Section** - Accordion FAQ from siteConfig
+6. **Related Tools** - Cross-tool internal linking for SEO
+7. **Footer** - About + features list + copyright + "More Tools" link
 
 ## Animation Pattern
 

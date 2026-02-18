@@ -1,17 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback } from "react";
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import { ArrowDown, Sparkles } from "lucide-react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { AnimatedGradientText } from "@/components/animated-gradient-text";
 import { FAQSection } from "@/components/faq-section";
 import { RelatedTools } from "@/components/related-tools";
+import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 
 export function HomePage() {
-  const [hasResults, setHasResults] = useState(false);
+  const scrollToTool = useCallback(() => {
+    document
+      .getElementById("tool")
+      ?.scrollIntoView({ behavior: "smooth" });
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -19,7 +24,7 @@ export function HomePage() {
 
       <main className="container max-w-screen-xl mx-auto px-4 py-12">
         {/* Hero Section */}
-        <div className="text-center mb-12">
+        <section className="text-center mb-20">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -54,14 +59,58 @@ export function HomePage() {
             {siteConfig.hero.subtitle}
           </motion.p>
 
-          {/* ============================================ */}
-          {/* TODO: Replace this section with your tool UI */}
-          {/* ============================================ */}
+          {/* CTA Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="max-w-4xl mx-auto mb-12"
+          >
+            <Button
+              size="lg"
+              onClick={scrollToTool}
+              className={`gap-2 bg-gradient-to-r from-${siteConfig.headerGradient.from} to-${siteConfig.headerGradient.to} text-white shadow-lg shadow-${siteConfig.headerGradient.from}/25 px-8 py-6 text-lg`}
+            >
+              Try Now
+              <ArrowDown className="h-5 w-5" />
+            </Button>
+          </motion.div>
+        </section>
+
+        {/* Feature Cards */}
+        <section className="text-center mb-20">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto"
+          >
+            {siteConfig.featureCards.map((feature, i) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 + i * 0.1 }}
+                className="text-center p-6 rounded-2xl bg-muted/30 border border-border/50"
+              >
+                <div className="text-4xl mb-3">{feature.icon}</div>
+                <h3 className="font-semibold mb-2">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {feature.description}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </section>
+
+        {/* ============================================ */}
+        {/* TODO: Replace this section with your tool UI */}
+        {/* ============================================ */}
+        <section id="tool" className="scroll-mt-24 mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="max-w-4xl mx-auto"
           >
             <div className="rounded-2xl border border-border/50 bg-muted/30 p-12 text-center">
               <p className="text-muted-foreground">
@@ -72,39 +121,17 @@ export function HomePage() {
               </p>
             </div>
           </motion.div>
+        </section>
 
-          {/* Feature Cards - shown when no results */}
-          {!hasResults && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto mt-20"
-            >
-              {siteConfig.featureCards.map((feature, i) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6 + i * 0.1 }}
-                  className="text-center p-6 rounded-2xl bg-muted/30 border border-border/50"
-                >
-                  <div className="text-4xl mb-3">{feature.icon}</div>
-                  <h3 className="font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {feature.description}
-                  </p>
-                </motion.div>
-              ))}
-            </motion.div>
-          )}
-
-          {/* Related Tools - Cross-linking for SEO */}
-          <RelatedTools />
-
-          {/* FAQ Section */}
+        {/* FAQ Section */}
+        <section className="text-center mb-20">
           <FAQSection />
-        </div>
+        </section>
+
+        {/* Related Tools - Cross-linking for SEO */}
+        <section className="text-center">
+          <RelatedTools />
+        </section>
       </main>
 
       <Footer />

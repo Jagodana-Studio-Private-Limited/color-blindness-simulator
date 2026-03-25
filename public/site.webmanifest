@@ -1,7 +1,7 @@
 {
-  "name": "{{TOOL_NAME}}",
-  "short_name": "{{TOOL_SHORT_NAME}}",
-  "description": "{{TOOL_DESCRIPTION}}",
+  "name": "Color Blindness Simulator",
+  "short_name": "CVD Simulator",
+  "description": "Simulate how colors appear to people with different types of color vision deficiency. Test your designs for accessibility.",
   "icons": [
     {
       "src": "/favicon.svg",
@@ -22,7 +22,7 @@
       "purpose": "any maskable"
     }
   ],
-  "theme_color": "{{BRAND_COLOR}}",
+  "theme_color": "#a855f7",
   "background_color": "#ffffff",
   "display": "standalone",
   "orientation": "portrait-primary",

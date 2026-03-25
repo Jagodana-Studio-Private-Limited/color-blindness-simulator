@@ -1,103 +1,99 @@
 export const siteConfig = {
-  // ====== CUSTOMIZE THESE FOR EACH TOOL ======
-  name: "{{TOOL_NAME}}",
-  title: "{{TOOL_TITLE}}",
-  description: "{{TOOL_DESCRIPTION}}",
-  url: "https://{{TOOL_SLUG}}.jagodana.com",
+  name: "Color Blindness Simulator",
+  title: "Color Blindness Simulator - Test Colors for Color Vision Deficiency",
+  description:
+    "Simulate how colors appear to people with different types of color vision deficiency. Test your designs for accessibility with 8 types of color blindness simulation.",
+  url: "https://color-blindness-simulator.tools.jagodana.com",
   ogImage: "/opengraph-image",
 
-  // Header
-  headerIcon: "Wrench", // lucide-react icon name (e.g., Image, Map, Code, Palette, Globe, FileSearch)
-  // Brand gradient colors for Tailwind are in globals.css (--brand / --brand-accent)
-  // Use text-brand, from-brand, to-brand-accent etc. in components
-  brandAccentColor: "#06b6d4", // hex accent for OG image gradient (must match --brand-accent in globals.css)
+  headerIcon: "Eye",
+  brandAccentColor: "#ec4899",
 
-  // SEO
   keywords: [
-    "{{KEYWORD_1}}",
-    "{{KEYWORD_2}}",
-    "{{KEYWORD_3}}",
+    "color blindness simulator",
+    "color vision deficiency",
+    "protanopia simulator",
+    "deuteranopia simulator",
+    "tritanopia simulator",
+    "accessibility testing",
+    "color accessibility",
+    "web accessibility",
+    "WCAG color contrast",
+    "design accessibility tool",
+    "color blind test",
+    "CVD simulation",
+    "color perception",
+    "accessible design",
   ],
-  applicationCategory: "DeveloperApplication", // or "DesignApplication", "UtilitiesApplication"
+  applicationCategory: "DesignApplication",
 
-  // Theme
-  themeColor: "#10b981", // used in manifest and meta tags
+  themeColor: "#a855f7",
 
-  // Branding
   creator: "Jagodana",
   creatorUrl: "https://jagodana.com",
   twitterHandle: "@jagodana",
 
-  // Social Profiles (for Organization schema sameAs)
-  socialProfiles: [
-    "https://twitter.com/jagodana",
-    // Add more: LinkedIn, YouTube, etc.
-  ],
+  socialProfiles: ["https://twitter.com/jagodana"],
 
-  // Links
   links: {
-    github: "https://github.com/Jagodana-Studio-Private-Limited/{{TOOL_SLUG}}",
+    github:
+      "https://github.com/Jagodana-Studio-Private-Limited/color-blindness-simulator",
     website: "https://jagodana.com",
   },
 
-  // Footer
   footer: {
-    about: "{{FOOTER_ABOUT_DESCRIPTION}}",
+    about:
+      "Free online color blindness simulator helping designers and developers build more accessible products. Simulate 8 types of color vision deficiency instantly in your browser.",
     featuresTitle: "Features",
     features: [
-      "{{FEATURE_1}}",
-      "{{FEATURE_2}}",
-      "{{FEATURE_3}}",
-      "{{FEATURE_4}}",
+      "8 CVD simulation types",
+      "Full palette comparison grid",
+      "WCAG contrast ratio checker",
+      "100% client-side processing",
     ],
   },
 
-  // Hero Section
   hero: {
-    badge: "{{HERO_BADGE_TEXT}}",
-    titleLine1: "{{HERO_TITLE_LINE_1}}",
-    titleGradient: "{{HERO_TITLE_GRADIENT_TEXT}}",
-    subtitle: "{{HERO_SUBTITLE}}",
+    badge: "Accessibility Tool",
+    titleLine1: "See Colors Through",
+    titleGradient: "Different Eyes",
+    subtitle:
+      "Simulate how people with color blindness see your designs. Test any color palette against 8 types of color vision deficiency instantly — no uploads, 100% private.",
   },
 
-  // Feature Cards (shown on homepage)
   featureCards: [
     {
-      icon: "{{FEATURE_ICON_1}}",
-      title: "{{FEATURE_CARD_TITLE_1}}",
-      description: "{{FEATURE_CARD_DESC_1}}",
+      icon: "👁️",
+      title: "8 CVD Types",
+      description:
+        "Simulate Protanopia, Deuteranopia, Tritanopia, Achromatopsia, and 4 anomalous trichromacy variants.",
     },
     {
-      icon: "{{FEATURE_ICON_2}}",
-      title: "{{FEATURE_CARD_TITLE_2}}",
-      description: "{{FEATURE_CARD_DESC_2}}",
+      icon: "🎨",
+      title: "Palette Testing",
+      description:
+        "Test entire color palettes at once. See how your brand colors and UI elements appear to users with CVD.",
     },
     {
-      icon: "{{FEATURE_ICON_3}}",
-      title: "{{FEATURE_CARD_TITLE_3}}",
-      description: "{{FEATURE_CARD_DESC_3}}",
+      icon: "🔒",
+      title: "100% Private",
+      description:
+        "All simulations run in your browser using pure math. No colors are ever sent to any server.",
     },
   ],
 
-  // Related Tools (cross-linking to sibling Jagodana tools for internal SEO)
   relatedTools: [
+    {
+      name: "Color Palette Explorer",
+      url: "https://color-palette-explorer.jagodana.com",
+      icon: "🎭",
+      description: "Extract color palettes from any image.",
+    },
     {
       name: "Favicon Generator",
       url: "https://favicon-generator.jagodana.com",
       icon: "🎨",
       description: "Generate all favicon sizes + manifest from any image.",
-    },
-    {
-      name: "Sitemap Checker",
-      url: "https://sitemap-checker.jagodana.com",
-      icon: "🔍",
-      description: "Discover and validate sitemaps on any website.",
-    },
-    {
-      name: "Regex Playground",
-      url: "https://regex-playground.jagodana.com",
-      icon: "🧪",
-      description: "Build, test & debug regular expressions in real-time.",
     },
     {
       name: "Screenshot Beautifier",
@@ -106,10 +102,16 @@ export const siteConfig = {
       description: "Transform screenshots into beautiful images.",
     },
     {
-      name: "Color Palette Explorer",
-      url: "https://color-palette-explorer.jagodana.com",
-      icon: "🎭",
-      description: "Extract color palettes from any image.",
+      name: "Regex Playground",
+      url: "https://regex-playground.jagodana.com",
+      icon: "🧪",
+      description: "Build, test & debug regular expressions in real-time.",
+    },
+    {
+      name: "Sitemap Checker",
+      url: "https://sitemap-checker.jagodana.com",
+      icon: "🔍",
+      description: "Discover and validate sitemaps on any website.",
     },
     {
       name: "Logo Maker",
@@ -119,56 +121,72 @@ export const siteConfig = {
     },
   ],
 
-  // HowTo Steps (drives HowTo JSON-LD schema for rich results)
   howToSteps: [
-    { name: "{{STEP_1_NAME}}", text: "{{STEP_1_TEXT}}", url: "" },
-    { name: "{{STEP_2_NAME}}", text: "{{STEP_2_TEXT}}", url: "" },
-    { name: "{{STEP_3_NAME}}", text: "{{STEP_3_TEXT}}", url: "" },
+    {
+      name: "Add Your Colors",
+      text: "Enter hex color codes or use the color picker to add up to 8 colors to your palette. A default palette is pre-loaded to get you started.",
+      url: "",
+    },
+    {
+      name: "View CVD Simulations",
+      text: "The tool instantly shows how your colors appear to people with each type of color vision deficiency in a side-by-side comparison grid.",
+      url: "",
+    },
+    {
+      name: "Check Contrast Ratios",
+      text: "Switch to the Contrast Checker tab to see WCAG contrast ratios between any two palette colors across all CVD types.",
+      url: "",
+    },
+    {
+      name: "Copy and Apply",
+      text: "Click any simulated color swatch to copy its hex code. Use these insights to refine your design for maximum accessibility.",
+      url: "",
+    },
   ],
-  howToTotalTime: "PT2M", // ISO 8601 duration (e.g., PT2M = 2 minutes)
+  howToTotalTime: "PT1M",
 
-  // FAQ (drives both the FAQ UI section and FAQPage JSON-LD schema)
   faq: [
     {
-      question: "{{FAQ_QUESTION_1}}",
-      answer: "{{FAQ_ANSWER_1}}",
+      question: "What types of color blindness does this simulator support?",
+      answer:
+        "The simulator supports 8 types: Protanopia (red-blind), Deuteranopia (green-blind), Tritanopia (blue-blind), Protanomaly (red-weak), Deuteranomaly (green-weak), Tritanomaly (blue-weak), Achromatopsia (total color blindness), and Achromatomaly (partial color blindness).",
     },
     {
-      question: "{{FAQ_QUESTION_2}}",
-      answer: "{{FAQ_ANSWER_2}}",
+      question: "How accurate is the color blindness simulation?",
+      answer:
+        "The simulation uses the Vienot, Brettel & Mollon (1999) algorithm with established RGB-to-LMS conversion matrices — the industry standard for color blindness simulation. While no simulation perfectly replicates individual experiences, these algorithms provide a scientifically validated approximation used in professional accessibility tools.",
     },
     {
-      question: "{{FAQ_QUESTION_3}}",
-      answer: "{{FAQ_ANSWER_3}}",
+      question: "Is my color data sent to any server?",
+      answer:
+        "No. All color calculations are performed entirely in your browser using JavaScript math. Your colors never leave your device — this tool is 100% client-side.",
     },
     {
-      question: "{{FAQ_QUESTION_4}}",
-      answer: "{{FAQ_ANSWER_4}}",
+      question: "What is the most common type of color blindness?",
+      answer:
+        "Deuteranomaly (green-weak) is the most common form, affecting about 5% of males. Protanomaly and Deuteranopia each affect about 1% of males. Overall, approximately 8% of males and 0.5% of females have some form of color vision deficiency.",
+    },
+    {
+      question: "What WCAG contrast ratio should I aim for?",
+      answer:
+        "WCAG 2.1 requires a minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text at Level AA. For enhanced Level AAA, aim for 7:1 for normal text and 4.5:1 for large text. Use the Contrast Checker tab to verify your ratios across different CVD types.",
+    },
+    {
+      question: "How can I make my designs more accessible for color blind users?",
+      answer:
+        "Key strategies: (1) Don't rely solely on color to convey information — add patterns, icons, or labels. (2) Ensure sufficient contrast between background and foreground colors. (3) Avoid red-green color combinations, which are problematic for the most common CVD types. (4) Test your entire color palette with this simulator before publishing.",
     },
   ],
 
-  // ====== PAGES (for sitemap + per-page SEO) ======
-  // Add every route here. Sitemap and generatePageMetadata() read from this.
   pages: {
     "/": {
-      title: "{{TOOL_TITLE}}",
-      description: "{{TOOL_DESCRIPTION}}",
+      title:
+        "Color Blindness Simulator - Test Colors for Color Vision Deficiency",
+      description:
+        "Simulate how colors appear to people with different types of color vision deficiency. Test your designs for accessibility with 8 types of color blindness simulation.",
       changeFrequency: "weekly" as const,
       priority: 1,
     },
-    // Example page (DELETE when starting your tool, or customize)
-    "/about": {
-      title: "About - {{TOOL_NAME}}",
-      description: "Learn more about {{TOOL_NAME}} and how it works.",
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    // "/blog": {
-    //   title: "Blog - {{TOOL_NAME}}",
-    //   description: "Tips, tutorials, and updates about {{TOOL_NAME}}.",
-    //   changeFrequency: "weekly" as const,
-    //   priority: 0.8,
-    // },
   },
 } as const;
 
